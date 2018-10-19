@@ -48,9 +48,9 @@
       }
     },
     mounted() {
-      /*if(localStorage.user){
-        this.$router.push('/listEvents')
-      }*/
+      if(localStorage.user){
+        this.$router.push('/search')
+      }
     }
   }
 </script>

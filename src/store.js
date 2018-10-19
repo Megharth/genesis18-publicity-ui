@@ -3,13 +3,17 @@ import Vuex from 'vuex'
 
 Vue.use(Vuex)
 
+import eventObj from './events'
+let events = eventObj.events
+
 export default new Vuex.Store({
   state: {
     user: {
       name: null,
       number: null,
       authToken: null,
-    }
+    },
+    events
   },
   mutations: {
     login(state, user) {

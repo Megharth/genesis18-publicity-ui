@@ -1,29 +1,36 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+    <navbarComponent></navbarComponent>
     <router-view/>
   </div>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-#nav {
-  padding: 30px;
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+
+<script>
+import navbarComponent from './components/navbarComponent'
+
+export default {
+  components: {
+    navbarComponent
   }
 }
+</script>
+<style lang="sass">
+@import './sass/variables'
+@font-face
+  font-family: 'Neptune'
+  src: url('./assets/Neptune_Trial.otf') format('opentype')
+body
+  background: $primaryColor
+  font-family: $primaryFont
+
+::-webkit-scrollbar
+  display: none
+.heading
+  text-align: center
+  font-size: 45px
+  color: #FFFFFF
+  font-weight: bold
+  text-transform: uppercase
+  font-family: $headingFont
 </style>

@@ -1,0 +1,28 @@
+.navbar-dark
+  background: #2D3142
+  color: #FFFFFB
+  box-shadow: 0 5px 5px #333333
+  a
+    color: #FFFFFB
+    font-size: 1.4em
+    margin-right: 10px
+    .nav-link
+      .active
+        color: $secondaryColor
+
+  .navbar-brand
+    display: flex
+    font-family: Neptune, sans-serif
+    img
+      height: 40px
+    .brand-title
+      margin-left: 8px
+      display: inline-block
+      font-size: 30px
+      @include textGrad
+
+
+  .navbar-toggler, .navbar-toggler:focus
+    border: none
+    outline: 0
+    margin-top: -8px
